@@ -1,0 +1,55 @@
+# Main GDSRC Directory Making
+
+import datetime, os ,glob
+
+while True:
+    name_list = []
+    name_list.append (input('이름은 ?   '))
+    if name_list[-1] == '0':
+        break
+
+    print(*name_list)
+
+    today = datetime.date.today()
+    todaystr = today.isoformat()
+
+    mfn_date = todaystr.split('-')
+    f_date = (mfn_date[0]+'_'+ mfn_date[1])
+    file_date = (mfn_date[0] + '_' + mfn_date[1] + '_' + mfn_date[2])
+
+    os.makedirs('C:/GDSRC/Data/' + file_date + '_' + str(*name_list), exist_ok=True)
+    os.makedirs('C:/GDSRC/Result/' + file_date + '_' + str(*name_list), exist_ok=True)
+
+    dir_data =  (file_date + '_' + str(*name_list))
+
+print(dir_data)
+
+import shutil
+shutil.copy2 ('/GDSRC/NJH.xls', '/GDSRC/Data/'+ dir_data + '/' + dir_data +'.xls')
+
+
+-----------------------------------------
+
+import pandas as pd
+# import datetime, os ,glob
+
+df = pd.read_excel('c:/Excel/Labgen_Coding.xls')
+name_list = []
+while True:
+    name_list.append (input('이름은 ?   '))
+    if name_list[-1] == '0':
+        break
+    print(*name_list)
+
+for i in name_list:
+    Migo = df[(df['수진자명'] == i) & (df['검체명'] != ('Tissue C-9' and 'Tissue' and 'Tissue B'))]
+    print(Migo)
+    Migo.to_excel('c:/Excel/' + 'Result_lab' + i + '.xlsx')
+
+    Migo_T = df[(df['수진자명'] == i) & (df['검체명'] == ('Tissue C-9' and 'Tissue' and 'Tissue B'))]
+    print(Migo_T)
+    Migo_T.to_excel('c:/Excel/' + 'Result_biopsy' + i + '.xlsx')
+
+    # grouped = df.groupby('검체명').size()
+    # print(grouped)
+    # grouped.to_excel('c:/Excel/' + 'Groupedby_size.xlsx')

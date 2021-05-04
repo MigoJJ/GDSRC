@@ -1,0 +1,32 @@
+ekgC01:  정상
+
+ekgC02:  동서맥(Sinus Bradycardia)
+ekgC03:  동빈맥(Sinus tachycardia)
+
+ekgC04:  심실조기수축(Early ventricular constraction)
+ekgC05:  심방조기수축(Early atrial constraction)
+
+ekgC06:  비특이적 ST-T분절 변화/비특이적 T분절 변화(Nonspecific ST-T change)
+
+ekgC07:  완전(불완전) 우각차단(Complete/Incomplete Rt bundle branch block)
+ekgC08:  좌각차단(Lt bundle branch block)
+
+ekgC09:  좌심실 비대(Left Ventricular Hypertrophy)
+ekgC10:  우심방확장(Rt atrial enlargement)
+ekgC11:  우심실 비대(Rt Ventricular Hypertrophy)
+
+ekgC12:  좌각전섬유속차단/좌각후섬유속차단(LAFB/LPFB)
+
+ekgC13:  심근경색/오래된 심근경색(Myocardial infarction/Old myocardial infarction)
+ekgC14:  심근허혈(Myocardial ischemia)
+
+ekgC15:  심방세동(Artrial Fibrillation)
+ekgC16:  WPW 증후군(WPW syndrome)
+ekgC17:  저전압(Low voltage)
+ekgC18:  이소성 심박조율(Ectopic rhythm)
+ekgC19:  심실내 전도지연/조기전이(Delayed ventricular conduction/Early conduction)
+
+ekgC20:  고 T파
+
+
+
